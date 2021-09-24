@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    /*background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+  );*/
+    background-image: linear-gradient(0deg, rgba(251,252,13,1) 23.8%, rgba(255,170,1,0.99) 92%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-container{
+    background-color: #000;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgb(247, 148, 1);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-container {
+    position: relative;
+    width: 110px;
+  }
+
+  .img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 110px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+    
+  }
+
+  .audio-container.play .img-container img {
+    animation-play-state: running;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .action-btn {
+    background-color: #000;
+    border: 0;
+    color: #f7be04;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+
+
+  .action-btn.action-btn-big {
+    color: #fcb51b;
+    font-size: 30px;
+  }
+
+  .action-btn:focus {
+    outline: 0;
+  }
+
+  .audio-info {
+    background-color: rgb(255, 166, 0);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+  }
+  
+  .audio-container.play .audio-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  
+  .audio-info h4 {
+    margin: 0;
+  }
+  
+  .progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: #000;
+    border-radius: 5px;
+    height: 100%;
+    width: 50%;
+    transition: width 0.1s linear;
+  }
+  
+  
