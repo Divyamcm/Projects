@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow-along Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Follow-along Navigation</h1>
+    <nav>
+        
+          <a href="">Home</a>
+          <a href="">Services</a>
+          <a href="">Reviews</a>
+          <a href="">Contact Us</a>
+          
+      </nav>
+      <footer class="footer" id="footer">
+        <p>Made with <span class="heart">❤</span> by Divya M C M</p>
+      </footer>
+      
+      <script>
+          const triggers = document.querySelectorAll('a');
+          const highlight = document.createElement('span');
+          highlight.classList.add('highlight');
+          document.body.appendChild(highlight);
+          function highlightLink() {
+    const linkCoords = this.getBoundingClientRect();
+    const coords = {
+      width: linkCoords.width,
+      height: linkCoords.height,
+      top: linkCoords.top + window.scrollY,
+      left: linkCoords.left + window.scrollX
+    };
+
+    highlight.style.width = `${coords.width}px`;
+    highlight.style.height = `${coords.height}px`;
+    highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+
+  }
+  triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+      </script>
+</body>
+</html>

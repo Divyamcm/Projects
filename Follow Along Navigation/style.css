@@ -1,0 +1,56 @@
+body{
+    background: url('./wall.jpg');
+    background-size: cover;
+    font-family: 'montserrat', sans-serif;
+    color: rgba(63, 13, 13, 0.74);
+    text-align: center;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    padding-top: 2em;
+    font-size: 3rem;
+  }
+  
+  nav {
+    padding-top: 10%;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: rgba(63, 13, 13, 0.74);
+    padding-top: 1rem;
+    padding: .5em;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+  }
+  
+  .highlight {
+    transition: all 0.2s;
+    border-bottom: 2px solid whitesmoke;
+    position: absolute;
+    top: 0;
+    background: rgba(192, 137, 137, 0.835);
+    /* background: rgba(153, 75, 75, 0.979); */
+    left: 0;
+    z-index: -1;
+    border-radius: 30px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+
+  .footer{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+
+.heart{color: #b14240;}
+
+
