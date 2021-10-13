@@ -1,0 +1,20 @@
+html{
+    background-color: #6b0f1a;
+    background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+}
+body {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1 {
+    cursor: pointer;
+    margin-top: calc(50vh - 16px);
+    font-size: 40px;
+    color: rgb(182, 37, 196);
+    transition: .4s
+  }
+  
+  h1:hover {
+    color: rgba(205, 211, 150, 0.9);
+  }

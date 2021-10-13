@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Sequence Detection</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Enter your code</h1>
+
+
+<script>
+
+const pressed = [];
+const secretCode = 'css';
+
+
+
+const h1 = document.getElementsByTagName('h1')[0];
+const text = h1.innerHTML;
+
+h1.addEventListener('click', (e) => {
+  if (h1.innerHTML === text) {
+    h1.innerHTML = secretCode;
+  } else {
+    h1.innerHTML = text;
+  }
+});
+
+
+
+window.addEventListener('keyup', (e) => { 
+  console.log(e.key);
+  pressed.push(e.key);
+  pressed.splice(-secretCode.length - 1 , pressed.length - secretCode.length);
+  console.log(pressed);
+  if (pressed.join('').includes(secretCode)) {
+    console.log('Received the secret code');
+    cornify_add();
+  }
+});
+
+console.log(pressed);
+
+</script> 
+</body>  
+</html>
