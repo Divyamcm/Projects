@@ -6,3 +6,4 @@
 4. Follow-along navigation using HTML, CSS and Javascript
 5. Key sequence detection using HTML,CSS and Javascript
 6. Countdown Timer using HTML,CSS and Javascript
+7. Password-Generator using HTMl,CSS and Javascript
